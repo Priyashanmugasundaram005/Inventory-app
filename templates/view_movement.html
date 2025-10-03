@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>Product Movements</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>From Location</th>
+                <th>To Location</th>
+                <th>Timestamp</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for movement in movements %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ movement.product.name if movement.product else "N/A" }}</td>
+                <td>{{ movement.qty }}</td>
+                <td>{{ movement.from_location if movement.from_location else "N/A" }}</td>
+                <td>{{ movement.to_location if movement.to_location else "N/A" }}</td>
+                <td>{{ movement.timestamp.strftime("%Y-%m-%d %H:%M:%S") if movement.timestamp else "N/A" }}</td>
+            </tr>
+            {% else %}
+            <tr>
+                <td colspan="6" style="text-align:center;">No movements found.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

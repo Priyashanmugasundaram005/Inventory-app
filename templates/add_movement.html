@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Add Movement{% endblock %}
+
+{% block content %}
+<h1>Move Product</h1>
+<form method="POST">
+    <label for="product">Product:</label>
+    <select name="product" id="product" required>
+    {% for product in products %}
+        <option value="{{ product.id }}">{{ product.name }}</option>
+    {% endfor %}
+</select>
+
+    <label for="from_location">From Location:</label>
+    <select name="from_location" id="from_location" class="input-field">
+        <option value="">--None--</option>
+        {% for location in locations %}
+        <option value="{{ location }}">{{ location }}</option>
+        {% endfor %}
+    </select>
+
+    <label for="to_location">To Location:</label>
+    <select name="to_location" id="to_location" class="input-field">
+        <option value="">--None--</option>
+        {% for location in locations %}
+        <option value="{{ location }}">{{ location }}</option>
+        {% endfor %}
+    </select>
+
+    <label for="qty">Quantity:</label>
+    <input type="number" name="qty" id="qty" required class="input-field">
+
+    <button type="submit" class="submit-btn">Move</button>
+</form>
+{% endblock %}

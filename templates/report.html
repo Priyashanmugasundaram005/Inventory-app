@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Product Balance{% endblock %}
+
+{% block content %}
+<h1>Product Balance in Each Location</h1>
+
+{% for location, products in product_balances.items() %}
+<div class="location-card">
+    <h2>{{ location }}</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+            <tr>
+                <td>{{ product.name }}</td>
+                <td>{{ product.quantity }}</td>
+                <td>{{ product.price }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endfor %}
+{% endblock %}
