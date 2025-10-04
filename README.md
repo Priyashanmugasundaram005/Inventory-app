@@ -102,6 +102,9 @@ Inventory-app/
 ### Viewing Reports
 - Click "Reports" to see all products organized by location
 - View quantity and pricing information for each location
+  <img width="1833" height="896" alt="report" src="https://github.com/user-attachments/assets/efa60c3c-19e5-433c-ad1d-b2482e87b0e4" />
+
+  
 
 ## 🔧 Customization
 
