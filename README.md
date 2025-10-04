@@ -84,11 +84,18 @@ Inventory-app/
    - Location (select from dropdown)
 3. Submit the form
 
+   <img width="1918" height="912" alt="add product" src="https://github.com/user-attachments/assets/59aebeef-be1e-4d74-968a-3f55a9dc1fd1" />
+
+
 **Smart Duplicate Handling**: If you add a product with the same name, price, and location, the system will automatically increase the quantity of the existing product instead of creating a duplicate.
 
 ### Managing Products
 - **Edit**: Click "Edit" to modify product details or change location
 - **Delete**: Click "Delete" to remove a product (with confirmation dialog)
+
+  
+
+  
 
 ### Tracking Movements
 1. Go to "Movement" → "Add Movement"
@@ -98,6 +105,8 @@ Inventory-app/
    - To Location
    - Quantity to move
 3. Submit to record the movement
+
+   
 
 ### Viewing Reports
 - Click "Reports" to see all products organized by location
