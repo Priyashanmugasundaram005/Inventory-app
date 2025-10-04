@@ -194,3 +194,8 @@ If you encounter any issues or have questions, please create an issue in the Git
 ---
 
 **Made with ❤️ using Flask**
+
+Sample video:
+https://github.com/user-attachments/assets/88a45fef-d102-44df-bbdb-8431db407d5a
+
+
