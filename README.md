@@ -116,21 +116,12 @@ Inventory-app/
   
 
 ## 🔧 Customization
+Adding New Locations
 
-### Adding New Locations
-To add or modify locations, edit the `LOCATIONS` list in `models.py`:
+You no longer need to modify the LOCATIONS list in models.py.
+New locations can now be added dynamically through the application UI.
 
-```python
-LOCATIONS = [
-    "Chennai",
-    "Coimbatore", 
-    "Madurai",
-    "Trichy",
-    "Salem",
-    "Bangalore",
-    "Your New Location"  # Add here
-]
-```
+Go to the “Add Location” section in the app, enter the location name, and save it — the new entry will be stored automatically and available system-wide.
 
 ### Database
 - The application uses SQLite database stored in `instance/inventory.db`
