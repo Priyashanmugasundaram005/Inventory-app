@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Add Location{% endblock %}
+
+{% block content %}
+<h1>Add New Location</h1>
+
+<form method="POST">
+    <label for="name">Location Name:</label>
+    <input type="text" id="name" name="name" required class="input-field" placeholder="Enter location name">
+
+    <button type="submit" class="submit-btn">Add Location</button>
+</form>
+
+<div class="action-buttons">
+    <a href="{{ url_for('location.manage_locations') }}" class="action-btn btn-report">Back to Locations</a>
+</div>
+{% endblock %}
+

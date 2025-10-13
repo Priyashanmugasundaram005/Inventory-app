@@ -21,8 +21,8 @@
                 <td>{{ loop.index }}</td>
                 <td>{{ movement.product.name if movement.product else "N/A" }}</td>
                 <td>{{ movement.qty }}</td>
-                <td>{{ movement.from_location if movement.from_location else "N/A" }}</td>
-                <td>{{ movement.to_location if movement.to_location else "N/A" }}</td>
+                <td>{{ movement.from_location.name if movement.from_location else "N/A" }}</td>
+                <td>{{ movement.to_location.name if movement.to_location else "N/A" }}</td>
                 <td>{{ movement.timestamp.strftime("%Y-%m-%d %H:%M:%S") if movement.timestamp else "N/A" }}</td>
             </tr>
             {% else %}

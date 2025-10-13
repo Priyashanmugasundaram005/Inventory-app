@@ -16,7 +16,7 @@
     <select name="from_location" id="from_location" class="input-field">
         <option value="">--None--</option>
         {% for location in locations %}
-        <option value="{{ location }}">{{ location }}</option>
+        <option value="{{ location.id }}">{{ location.name }}</option>
         {% endfor %}
     </select>
 
@@ -24,7 +24,7 @@
     <select name="to_location" id="to_location" class="input-field">
         <option value="">--None--</option>
         {% for location in locations %}
-        <option value="{{ location }}">{{ location }}</option>
+        <option value="{{ location.id }}">{{ location.name }}</option>
         {% endfor %}
     </select>
 

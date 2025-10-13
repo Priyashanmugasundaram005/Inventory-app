@@ -49,10 +49,24 @@
             <a href="{{ url_for('product.add_product') }}">Add Product</a>
             <a href="{{ url_for('movement.add_movement') }}">Move Product</a>
             <a href="{{ url_for('movement.view_movement') }}">View Movements</a>
+            <a href="{{ url_for('location.manage_locations') }}">Manage Locations</a>
             <a href="{{ url_for('product.product_report') }}">Report</a>
             
         </div>
     </div>
+
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="container">
+                {% for category, message in messages %}
+                    <div class="flash-message flash-{{ category }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
 
     <!-- Page content -->
     <div class="container">

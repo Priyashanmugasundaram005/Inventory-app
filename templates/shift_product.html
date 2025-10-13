@@ -17,7 +17,7 @@
     <label for="new_location">New Location:</label>
     <select id="new_location" name="new_location" required class="input-field">
         {% for location in locations %}
-            <option value="{{ location }}">{{ location }}</option>
+            <option value="{{ location.id }}">{{ location.name }}</option>
         {% endfor %}
     </select>
 
